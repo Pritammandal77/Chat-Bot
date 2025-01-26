@@ -1,8 +1,14 @@
-# React + Vite
+# AuraAI - Chatbot
+AuraAI is an intelligent chatbot built with React.js and vanilla CSS, utilizing the Gemini API for dynamic and interactive responses. Users can search for anything, and AuraAI will provide intelligent, context-aware answers powered by Gemini's generative language model.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features:
+Interactive Chatbot: Chat with AuraAI and get instant, AI-generated responses.
+Real-time Search: Users can search for any information, and AuraAI will provide accurate, AI-driven responses.Gemini API Integration: Powered by Google's Gemini API for advanced natural language understanding and content generation.
+Responsive Design: Fully responsive UI built using vanilla CSS, ensuring a smooth experience across devices.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Technologies Used:
+Frontend: React.js, Vanilla CSS
+API: Gemini API
+State Management: React Context API for managing global state across components
+Package Manager: npm (or Yarn, if preferred)
