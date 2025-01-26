@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 20px;
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 80vh;
+  width: 100%;
+}
+
+
+
+.response {
+  width: 65vw;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: justify;
+  background-color: #000000;
+  font-family: "Lato", serif;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-left: 3px solid rgb(62, 104, 255);
+  margin: 0px 0px 140px 0px;
+}
+
+
+.responseContainer {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+

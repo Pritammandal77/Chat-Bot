@@ -1,0 +1,347 @@
+.welcomeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 130px 0px 0px 0px;
+
+}
+
+.appTitle {
+  font-size: 70px;
+  background: linear-gradient(90deg, #5930ff, #d52cff, orange);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.para {
+  font-weight: 550;
+  background: linear-gradient(90deg, #28b0ff, #00ff33);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+}
+
+
+.card {
+  position: relative;
+  width: 230px;
+  height: 194px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  justify-content: center;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -3px;
+  margin: auto;
+  width: 260px;
+  height: 224px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(10px);
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.card p:not(.heading) {
+  font-size: 14px;
+}
+
+.card p:last-child {
+  color: #e81cff;
+  font-weight: 600;
+}
+
+.card:hover::after {
+  filter: blur(30px);
+}
+
+.appHeading {
+  align-self: flex-start;
+  margin-left: 22vw;
+}
+
+
+.appTitleDiv {
+  display: flex;
+  gap: 20px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  background: #353535;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotationBack 1s ease-in-out infinite reverse;
+}
+
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: #2e2e2e;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+.card2 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  box-shadow: 0px 0px 15px #00000027;
+  padding: 10px 10px;
+  border-radius: 5em;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.facebook svg {
+  fill: #f2f2f2;
+}
+
+.facebook:hover svg {
+  fill: #3b5998;
+}
+
+.github {
+  background-color: #333;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+
+
+
+
+@media (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .welcomeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    padding: 50px 0px 0px 0px;
+    overflow-x: hidden;
+  }
+
+  .loader {
+    visibility: hidden;
+  }
+
+
+  .appTitle {
+    background-color: rgb(0, 0, 0);
+    font-size: 50px;
+  }
+
+  .appHeading {
+    position: relative;
+    right: 20px;
+  }
+
+  .input {
+    width: 70vw;
+  }
+
+  .input::placeholder {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+  .welcomeContainer {
+    height: 80vw;
+  }
+
+  .cards {
+    flex-direction: row;
+  }
+
+  .card {
+    width: 170px;
+    height: 134px;
+
+  }
+
+  .card::before {
+    width: 200px;
+    height: 164px;
+
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .social-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 7px;
+
+  }
+
+  .social-buttons svg {
+    height: 20px;
+  }
+
+  .github svg {
+    width: 20px;
+    height: 20px;
+
+  }
+
+
+  .card p:last-child {
+    display: none;
+  }
+
+  .card p:not(.heading) {
+    display: none;
+  }
+}
+
+@media (min-width:375px) and (max-width:667px) {
+  .welcomeContainer {
+    padding: 60px 0px 150px 0px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .responseContainer {
+    padding: 70px 0px 0px 0px;
+  }
+
+} 
